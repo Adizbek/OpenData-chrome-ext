@@ -62,7 +62,7 @@ if (priceLabel && isAutoPage) {
           ${items}
           
           <div>
-            ${hasMore && `<a href="https://export.uz/similar=${url}"><div style="padding: 4px 8px; margin-top: 12px" class="button">Yana boshqa takliflarni Expert.uz saytida ko'ring</div><a/>`}
+            ${hasMore ? `<a href="https://expert.uz/?similar=${url}"><div style="padding: 4px 8px; margin-top: 12px" class="button">Yana boshqa takliflarni Expert.uz saytida ko'ring</div><a/>`: ''}
           </div>
         </div>
       `

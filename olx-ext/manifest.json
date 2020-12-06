@@ -1,0 +1,36 @@
+{
+  "name": "Price bot for OLX.uz",
+  "description": "Price recommendation bot extension for OLX",
+  "version": "1.1",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://olx.uz/*",
+        "*://www.olx.uz/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "olx.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Make this page red",
+    "default_icon": "icon.png"
+  },
+  "commands": {
+  }
+}
